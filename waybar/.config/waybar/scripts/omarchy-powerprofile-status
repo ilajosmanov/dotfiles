@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Quick timeout to prevent hanging
+current=$(timeout 1s powerprofilesctl get 2>/dev/null || echo "loading")
+
+case "$current" in
+    "power-saver")
+        icon="󰌪"
+        text="Power Saver"
+        ;;
+    "balanced")
+        icon="󰾅"
+        text="Balanced"
+        ;;
+    "performance")
+        icon="󰓅"
+        text="Performance"
+        ;;
+    "loading")
+        icon="󰂑"
+        text="Loading..."
+        ;;
+    *)
+        icon="󰂑"
+        text="Unknown"
+        ;;
+esac
+
+if [[ "$1" == "--json" ]]; then
+    echo "{\"text\":\"$icon\",\"tooltip\":\"Power Profile: $text\",\"class\":\"$current\"}"
+else
+    echo "$icon"
+fi

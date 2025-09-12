@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Get current profile
+current=$(powerprofilesctl get 2>/dev/null)
+
+# Cycle to next profile
+case "$current" in
+    "power-saver")
+        next="balanced"
+        ;;
+    "balanced")
+        next="performance"
+        ;;
+    "performance"|*)
+        next="power-saver"
+        ;;
+esac
+
+# Set the new profile
+powerprofilesctl set "$next" 2>/dev/null
+
+# Send notification
+notify-send "Power Profile" "Switched to: $next" -i "preferences-system-power" -t 2000
