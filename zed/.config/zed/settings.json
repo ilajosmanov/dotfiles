@@ -1,0 +1,68 @@
+
+{
+  "context_servers": {
+    "mcp-server-context7": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "default_minimum_tokens": "10000"
+      }
+    }
+  },
+  "agent": {
+    "play_sound_when_agent_done": true,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    }
+  },
+  "vim_mode": true,
+  "relative_line_numbers": true,
+
+  "edit_predictions": {
+    "mode": "subtle"
+  },
+
+  "ui_font_family": ".ZedMono",
+  "buffer_font_family": ".ZedMono",
+
+  "collaboration_panel": {
+    "button": false
+  },
+
+  "search": {
+    "button": false
+  },
+
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
+
+  "notification_panel": {
+    "button": false
+  },
+
+  "terminal": {
+    "default_height": 400
+  },
+
+  "project_panel": {
+    "default_width": 400
+  },
+
+  "git_panel": {
+    "default_width": 400
+  },
+
+  "outline_panel": {
+    "default_width": 400
+  },
+
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true
+      }
+    }
+  }
+}
