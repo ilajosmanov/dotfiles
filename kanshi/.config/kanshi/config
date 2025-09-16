@@ -1,0 +1,11 @@
+profile docked {
+    output "Dell Inc. DELL U2723QE 6LPX2P3" {
+        scale 1.33333
+        position 0,0
+    }
+    output eDP-1 disable
+}
+
+profile mobile {
+    output eDP-1 enable
+}
