@@ -1,5 +1,5 @@
-
 {
+  "theme": "One Dark",
   "context_servers": {
     "mcp-server-context7": {
       "source": "extension",
@@ -10,10 +10,11 @@
     }
   },
   "agent": {
+    "default_profile": "ask",
     "play_sound_when_agent_done": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "model": "claude-sonnet-4"
     }
   },
   "vim_mode": true,
@@ -58,10 +59,10 @@
     "default_width": 400
   },
 
-  "lsp": {
-    "biome": {
-      "settings": {
-        "require_config_file": true
+  "languages": {
+    "SCSS": {
+      "code_actions_on_format": {
+        "source.fixAll.stylelint": true
       }
     }
   }
