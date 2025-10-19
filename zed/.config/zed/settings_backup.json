@@ -2,16 +2,6 @@
   "theme": "One Dark",
 
   "context_servers": {
-    "nuxt-ui": {
-      "source": "custom",
-      "enabled": true,
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "https://ui.nuxt.com/mcp"
-      ],
-      "env": {}
-    },
     "mcp-server-context7": {
       "source": "extension",
       "enabled": true,
@@ -20,22 +10,18 @@
       }
     },
     "Sentry": {
-      "source": "custom",
       "command": "npx",
       "args": ["-y", "mcp-remote@latest", "https://mcp.sentry.dev/mcp"]
     }
   },
   "agent": {
-    "default_profile": "write",
+    "default_profile": "ask",
     "play_sound_when_agent_done": true,
-    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
     }
   },
-
-  "line_indicator_format": "short",
 
   "git": {
     "branch_picker": {
@@ -75,8 +61,7 @@
   },
 
   "project_panel": {
-    "default_width": 400,
-    "auto_fold_dirs": false
+    "default_width": 400
   },
 
   "git_panel": {
@@ -85,7 +70,5 @@
 
   "outline_panel": {
     "default_width": 400
-  },
-
-  "show_whitespaces": "trailing"
+  }
 }
