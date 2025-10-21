@@ -74,6 +74,8 @@ tooltip {
 
 #custom-update {
   font-size: 10px;
+  min-width: 14px;
+  margin-left: 7px;
 }
 
 #clock {
