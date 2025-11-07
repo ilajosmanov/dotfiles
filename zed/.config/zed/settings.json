@@ -1,4 +1,6 @@
 {
+  "confirm_quit": true,
+  "theme": "Matte Black",
   "context_servers": {
     "nuxt-ui": {
       "source": "custom",
@@ -70,16 +72,16 @@
   },
 
   "project_panel": {
-    "default_width": 400,
+    "default_width": 500,
     "auto_fold_dirs": false
   },
 
   "git_panel": {
-    "default_width": 400
+    "default_width": 500
   },
 
   "outline_panel": {
-    "default_width": 400
+    "default_width": 500
   },
 
   "show_whitespaces": "trailing"
