@@ -23,13 +23,12 @@
     }
   },
   "agent": {
-    "default_profile": "write",
-    "play_sound_when_agent_done": true,
-    "always_allow_tool_actions": true,
+    "default_profile": "ask",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4"
-    }
+      "model": "claude-sonnet-4-5"
+    },
+    "model_parameters": []
   },
 
   "line_indicator_format": "short",
@@ -42,7 +41,7 @@
   },
 
   "vim_mode": true,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
 
   "edit_predictions": {
     "mode": "subtle"
