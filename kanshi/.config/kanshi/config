@@ -3,7 +3,7 @@ profile home-docked {
         scale 1
         position 0,0
     }
-    output eDP-1 disable
+    output eDP-1 enable
 }
 
 profile docked {
