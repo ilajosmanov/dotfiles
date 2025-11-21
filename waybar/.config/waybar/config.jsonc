@@ -46,6 +46,8 @@
     "format": "{}",
     "format-en": "EN",
     "format-uk": "UA",
+    "format-ru": "RU",
+    "format-et": "EE",
     "on-click": "~/.config/waybar/scripts/omarchy-toggle-kb-layout.sh"
   },
   "custom/powerprofile": {

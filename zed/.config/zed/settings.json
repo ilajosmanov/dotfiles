@@ -1,6 +1,10 @@
 {
   "confirm_quit": true,
-  "theme": "Matte Black",
+  "theme": {
+    "dark": "Catppuccin Mocha - No Italics",
+    "light": "Catppuccin Latte - No Italics",
+    "mode": "system"
+  },
   "context_servers": {
     "nuxt-ui": {
       "source": "custom",
