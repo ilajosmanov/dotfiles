@@ -1,37 +1,41 @@
 {
+  "soft_wrap": "prefer_line",
+  "colorize_brackets": true,
   "confirm_quit": true,
   "theme": {
-    "dark": "Catppuccin Mocha - No Italics",
+    "dark": "Matte Black",
     "light": "Catppuccin Latte - No Italics",
     "mode": "system"
   },
   "context_servers": {
     "nuxt-ui": {
-      "source": "custom",
       "enabled": true,
       "command": "npx",
       "args": ["mcp-remote", "https://ui.nuxt.com/mcp"],
       "env": {}
     },
     "mcp-server-context7": {
-      "source": "extension",
       "enabled": true,
       "settings": {
         "default_minimum_tokens": "10000"
       }
     },
     "Sentry": {
-      "source": "custom",
       "command": "npx",
       "args": ["-y", "mcp-remote@latest", "https://mcp.sentry.dev/mcp"]
+    },
+    "SuperfeedbackSentry": {
+      "settings": {},
+      "url": "https://mcp.sentry.dev/mcp/superfeedback/javascript-nuxt"
     }
   },
   "agent": {
+    "dock": "right",
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-5"
+      "model": "claude-opus-4-5"
     },
     "model_parameters": []
   },
