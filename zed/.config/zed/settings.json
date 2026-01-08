@@ -5,92 +5,97 @@
   "theme": {
     "dark": "Matte Black",
     "light": "Catppuccin Latte - No Italics",
-    "mode": "system"
+    "mode": "system",
   },
   "context_servers": {
     "nuxt-ui": {
       "enabled": true,
       "command": "npx",
       "args": ["mcp-remote", "https://ui.nuxt.com/mcp"],
-      "env": {}
+      "env": {},
+    },
+    "nuxt": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://nuxt.com/mcp"],
+      "env": {},
     },
     "mcp-server-context7": {
       "enabled": true,
       "settings": {
-        "default_minimum_tokens": "10000"
-      }
+        "default_minimum_tokens": "10000",
+      },
     },
     "Sentry": {
       "command": "npx",
-      "args": ["-y", "mcp-remote@latest", "https://mcp.sentry.dev/mcp"]
+      "args": ["-y", "mcp-remote@latest", "https://mcp.sentry.dev/mcp"],
     },
-    "SuperfeedbackSentry": {
-      "settings": {},
-      "url": "https://mcp.sentry.dev/mcp/superfeedback/javascript-nuxt"
-    }
   },
   "agent": {
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4"
+    },
     "dock": "right",
     "always_allow_tool_actions": true,
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-opus-4-5"
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4",
     },
-    "model_parameters": []
+    "model_parameters": [],
   },
 
   "line_indicator_format": "short",
 
   "git": {
     "branch_picker": {
-      "show_author_name": true
+      "show_author_name": true,
     },
-    "hunk_style": "unstaged_hollow"
+    "hunk_style": "unstaged_hollow",
   },
 
   "vim_mode": true,
   "relative_line_numbers": "enabled",
 
   "edit_predictions": {
-    "mode": "subtle"
+    "mode": "subtle",
   },
 
   "ui_font_family": ".ZedMono",
   "buffer_font_family": ".ZedMono",
 
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
 
   "search": {
-    "button": false
+    "button": false,
   },
 
   "tab_bar": {
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
 
   "notification_panel": {
-    "button": false
+    "button": false,
   },
 
   "terminal": {
-    "default_height": 400
+    "default_height": 400,
   },
 
   "project_panel": {
     "default_width": 500,
-    "auto_fold_dirs": false
+    "auto_fold_dirs": false,
   },
 
   "git_panel": {
-    "default_width": 500
+    "default_width": 500,
   },
 
   "outline_panel": {
-    "default_width": 500
+    "default_width": 500,
   },
 
-  "show_whitespaces": "trailing"
+  "show_whitespaces": "trailing",
 }
