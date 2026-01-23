@@ -1,12 +1,10 @@
 {
+  "features": {
+    "edit_prediction_provider": "copilot",
+  },
   "soft_wrap": "prefer_line",
   "colorize_brackets": true,
   "confirm_quit": true,
-  "theme": {
-    "dark": "Gruvbox Dark Hard",
-    "light": "Catppuccin Latte - No Italics",
-    "mode": "system",
-  },
   "context_servers": {
     "nuxt-ui": {
       "enabled": true,
@@ -33,7 +31,7 @@
   "agent": {
     "inline_assistant_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4"
+      "model": "gpt-5-mini",
     },
     "dock": "right",
     "always_allow_tool_actions": true,

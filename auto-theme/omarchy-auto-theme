@@ -1,0 +1,19 @@
+#!/bin/bash
+# Auto day/night theme switcher for Omarchy
+# Coordinates: Tallinn, Estonia (59.44N 24.75E)
+
+LIGHT_THEME="catppuccin-latte"
+DARK_THEME="catppuccin"
+COORDS="59.44N 24.75E"
+
+CURRENT_THEME=$(cat ~/.config/omarchy/current/theme.name 2>/dev/null)
+
+if sunwait poll $COORDS; then
+    WANTED_THEME="$LIGHT_THEME"
+else
+    WANTED_THEME="$DARK_THEME"
+fi
+
+if [[ "$CURRENT_THEME" != "$WANTED_THEME" ]]; then
+    omarchy-theme-set "$WANTED_THEME"
+fi
