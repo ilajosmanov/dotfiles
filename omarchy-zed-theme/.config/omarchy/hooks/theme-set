@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Sync Omarchy theme to Zed editor
+# Called by omarchy-hook theme-set <theme-name>
+
+ZED_THEME="$HOME/.config/omarchy/current/theme/zed.json"
+ZED_SETTINGS="$HOME/.config/zed/settings.json"
+SKIP_FLAG="$HOME/.local/state/omarchy/toggles/skip-zed-theme-changes"
+
+# Skip if toggle is set
+[[ -f "$SKIP_FLAG" ]] && exit 0
+
+# Skip if no zed.json for this theme
+[[ -f "$ZED_THEME" ]] || exit 0
+
+# Skip if zed settings doesn't exist
+[[ -f "$ZED_SETTINGS" ]] || exit 0
+
+theme_name=$(jq -r '.name' "$ZED_THEME")
+
+# Zed's theme can be a string or object. We handle string format.
+# If "theme" key doesn't exist, add it after opening brace
+if ! grep -q '"theme"' "$ZED_SETTINGS"; then
+  sed -i --follow-symlinks -E '0,/\{/{s/\{/{\n  "theme": "",/}' "$ZED_SETTINGS"
+fi
+
+# Update theme value (handles: "theme": "value" format)
+sed -i --follow-symlinks -E \
+  "s/(\"theme\"[[:space:]]*:[[:space:]]*\")[^\"]*(\")/\1$theme_name\2/" \
+  "$ZED_SETTINGS"
