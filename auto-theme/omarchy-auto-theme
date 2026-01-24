@@ -3,12 +3,14 @@
 # Coordinates: Tallinn, Estonia (59.44N 24.75E)
 
 LIGHT_THEME="catppuccin-latte"
-DARK_THEME="catppuccin"
+DARK_THEME="gruvbox"
 COORDS="59.44N 24.75E"
 
 CURRENT_THEME=$(cat ~/.config/omarchy/current/theme.name 2>/dev/null)
 
-if sunwait poll $COORDS; then
+# sunwait poll exit codes: 2 = DAY, 3 = NIGHT
+sunwait poll $COORDS > /dev/null 2>&1
+if [[ $? -eq 2 ]]; then
     WANTED_THEME="$LIGHT_THEME"
 else
     WANTED_THEME="$DARK_THEME"

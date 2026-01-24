@@ -1,5 +1,9 @@
 {
-  "theme": "Catppuccin Mocha",
+  "theme": {
+    "dark": "Gruvbox Dark Hard",
+    "light": "Catppuccin Latte",
+    "mode": "system",
+  },
   "features": {
     "edit_prediction_provider": "copilot",
   },
